@@ -4,7 +4,13 @@ Title: Construct a cost-sensitive classifier from training samples and validatio
 Version: 0.1.0
 Author: Ye Tian, Weiping Zhang
 Maintainer: Ye Tian <tyustc97@gmail.com>
-Description:  We propose an effective THresholding method  based on ORder Statistic, called THORS, to convert an arbitrary scoring-type classifier, which can induce a continuous cumulativedistribution function of the score, into a cost-sensitive one. The procedure uses the order statistic to find anoptimal threshold for classification, requiring almost no knowledge of the classifier itself. Unlike commondata-driven methods, we analytically show that THORS has theoretical guaranteed performance, theoreticalbounds for the costs and the lower time complexity.
+Description: We propose an effective THresholding method based on ORder Statistic, 
+called THORS, to convert an arbitrary scoring-type classifier, which can induce a continuous 
+cumulativedistribution function of the score, into a cost-sensitive one. The procedure uses 
+the order statistic to find anoptimal threshold for classification, requiring almost no 
+knowledge of the classifier itself. Unlike commondata-driven methods, we analytically show 
+that THORS has theoretical guaranteed performance, theoreticalbounds for the costs and the 
+lower time complexity.
 License: None
 Encoding: UTF-8
 LazyData: true
