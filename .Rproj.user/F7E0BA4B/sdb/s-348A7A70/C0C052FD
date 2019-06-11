@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "pred.core <- function(object, newx=NULL, ...){\n  if(object$base==\"logistic\"){\n    score.test <- predict(object$fits, newx, type=\"response\")\n  }else if(object$base == \"lda\"){\n    score.test <- predict(object$fits, newx)$posterior[,2]\n  }else if(object$base == \"svm\"){\n    score.test <- attr(predict(object$fits, newx, probability = TRUE), \"probabilities\")[,2]\n  }else if(object$base == \"randomforest\"){\n    score.test <- predict(object$fits, newx, type = \"prob\")[,2]\n  }else if(object$base == \"nb\"){\n    score.test <- predict(object$fits, newx, type = \"prob\")[,2]\n  }else if(object$base == \"knn\"){\n    score.test <- predict(object$fits, newx, type = \"prob\")[,2]\n  }else if(object$base == \"tree\"){\n    score.test <- predict(object$fits, newx, type = \"vector\")[,2]\n  }\n  ypred <- rep(0, length(score.test))\n  ypred[score.test>object$threshold] <- 1\n  ypred\n}\n\n",
+    "created" : 1560226602513.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3077826388",
+    "id" : "C0C052FD",
+    "lastKnownWriteTime" : 1560239388,
+    "last_content_update" : 1560239388367,
+    "path" : "C:/Users/tiany/Desktop/THORS/R/pred.core.R",
+    "project_path" : "R/pred.core.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

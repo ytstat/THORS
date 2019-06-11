@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Predict the outcome of a set of new observations using the fitted thors object.\n#'\n#' @export\n#' @param object the fitted npmc object using \\code{thors}.\n#' @param newx a set of new observations.\n#' @param ... additional arguments.\n#' @return the test cost.\n#' @seealso \\code{\\link{thors}}, \\code{\\link{cost}}.\n\npredict.thors <- function(object, newx=NULL, ...){\n  pred.core(object, newx)\n}\n\n",
+    "created" : 1560226600893.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2150976793",
+    "id" : "2345A1FA",
+    "lastKnownWriteTime" : 1560239397,
+    "last_content_update" : 1560239397087,
+    "path" : "C:/Users/tiany/Desktop/THORS/R/predict.thors.R",
+    "project_path" : "R/predict.thors.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

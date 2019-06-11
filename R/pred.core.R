@@ -18,3 +18,4 @@ pred.core <- function(object, newx=NULL, ...){
   ypred[score.test>object$threshold] <- 1
   ypred
 }
+

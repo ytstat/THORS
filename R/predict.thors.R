@@ -10,3 +10,4 @@
 predict.thors <- function(object, newx=NULL, ...){
   pred.core(object, newx)
 }
+

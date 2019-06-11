@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Predicting the outcome of a set of new observations using the fitted npmc object.\n#'\n#' @export\n#' @param object fitted npmc object using \\code{npmc}.\n#' @param newx a set of new observations.\n#' @param ... additional arguments.\n#' @return A list containing the predicted label and score.\n#' \\item{pred.label}{Predicted label vector.}\n#' \\item{pred.score}{Predicted score matrix.}\n#' @seealso \\code{\\link{npmc}}, \\code{\\link{error_rate}} and \\code{\\link{generate.data}}.\n#' @examples\n#' \\dontrun{\n#' set.seed(1)\n#' n = 1e4\n#' train.set <- generate.data(fac=5,class.num=4,n)\n#' x <- train.set$x\n#' y <- train.set$y\n#' test.set <- generate.data(fac=5,class.num=4,n)\n#' xtest <- test.set$x\n#' ytest <- test.set$y\n#'\n#' ##Use multi-logistic classifier and the general error rate (GER) control with alpha=c(\"1\"=0.05,\"2\"=0.1), w=c(\"1\"=0,\"2\"=0,\"3\"=1,\"4\"=1), delta=0.05\n#' fit <-  npmc(x, y, method = \"logistic\",type=\"GER\",alpha=c(\"1\"=0.05,\"2\"=0.1),w=c(\"1\"=0,\"2\"=0,\"3\"=1,\"4\"=1),delta=0.05,trace=FALSE)\n#' if(!any(is.na(fit$fits$threshold))){\n#' pred <-  predict(fit,xtest)\n#' accuracy <-  mean(pred$pred.label==ytest)\n#' cat(\"Overall Accuracy: \",  accuracy,\"\\n\")\n#' error <- error_rate(ytest,pred$pred.label,type=\"GER\")\n#' cat(\"General Error Rate:\\n\")\n#' print(error)\n#' cat(\"Optimization Value:\", sum(error[3:4]), \"\\n\")\n#' }else{\n#' cat(\"no solution!\\n\")\n#' }\n#' }\n\npredict.npmc <- function(object,newx=NULL,...)\n{\n  pred.core(object,newx)\n}\n",
+    "created" : 1560234810499.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3865558162",
+    "id" : "D630120",
+    "lastKnownWriteTime" : 1543538022,
+    "last_content_update" : 1543538022,
+    "path" : "C:/Users/tiany/Desktop/npmcc/R/predict.npmc.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -14,3 +14,4 @@ cost <- function(y, ypred, beta, A, form=c("average", "total")){
   form <- match.arg(form)
   A*(length(y[y==0 & ypred==1])*beta + length(y[y==1 & ypred==0]))/length(y)
 }
+
