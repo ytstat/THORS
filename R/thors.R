@@ -78,7 +78,7 @@
 #' ## use the 5-fold cross-validation to calculate the threshold
 #' library(datasets)
 #' data(iris)
-#' set.seed(0)
+#' set.seed(1)
 #' beta <- 0.5
 #' D <- iris[1:100,][sample(100),]
 #' D$Species <- as.numeric(D$Species)-1 # assign class "setosa" as class 0 and class "versicolor" as class 1.
