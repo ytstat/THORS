@@ -1,12 +1,11 @@
 Package: THORS
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Construct a cost-sensitive classifier from training samples and validation samples.
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Ye Tian, Weiping Zhang
+Maintainer: Ye Tian <tyustc97@gmail.com>
+Description:  We propose an effective THresholding method  based on ORder Statistic, called THORS, to convert an arbitrary scoring-type classifier, which can induce a continuous cumulativedistribution function of the score, into a cost-sensitive one. The procedure uses the order statistic to find anoptimal threshold for classification, requiring almost no knowledge of the classifier itself. Unlike commondata-driven methods, we analytically show that THORS has theoretical guaranteed performance, theoreticalbounds for the costs and the lower time complexity.
+License: None
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
